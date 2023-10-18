@@ -12,4 +12,12 @@ public class SerieService {
 	public List<Serie> findAll(){
 		return dao.findAll();
 	}
+
+	public Serie findById(Long id) {
+		return dao.findById(id);
+	}
+
+	public void delete(Serie serie) {
+		dao.delete(serie);
+	}
 }
