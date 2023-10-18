@@ -40,6 +40,7 @@ public class SerieDao {
 	public void delete(Serie serie) {
 		
 		series.remove(serie); 
+		System.out.println(series);
 	}
 
 }
