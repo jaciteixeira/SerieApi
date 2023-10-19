@@ -11,12 +11,13 @@ public class SerieService {
 	SerieDao dao = new SerieDao();
 	
 	public List<Serie> findAll(){
+		List<Serie> series;
 		try {
-			dao.findAll();
+			series = dao.findAll();
 		} catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return null;
+        return series;
 	}
 
 	public Serie findById(Long id) {
