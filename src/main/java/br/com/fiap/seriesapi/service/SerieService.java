@@ -17,7 +17,7 @@ public class SerieService {
 		} catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return series;
+        return null;
 	}
 
 	public Serie findById(Long id) {

@@ -15,7 +15,6 @@ public class SerieDao {
 	List<Serie> series = new ArrayList<>();
 
 	public List<Serie> findAll() throws SQLException {
-		var series = new ArrayList<Serie>();
 		var con = DriverManager.getConnection(URL, USER, PASS);
 		var rs = con.createStatement().executeQuery("SELECT * FROM SERIES;");
 
@@ -33,7 +32,15 @@ public class SerieDao {
 		return series;
 	}
 
-	public Serie findById(Long id) {
+	public Serie findById(Long id){
+//		
+//		var con = DriverManager.getConnection(URL, USER, PASS);
+//		var rs = con.createStatement().executeQuery("SELECT * FROM SERIES WHERE id = ?;");
+//
+//		Serie ser = rs.stream().filter(serie -> serie.id() == id).findFirst().orElse(null) ;
+//		
+//		con.close();
+//		return ser;
 		return series.stream().filter(serie -> serie.id() == id).findFirst().orElse(null);
 
 	}
